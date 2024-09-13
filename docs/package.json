@@ -1,0 +1,19 @@
+{
+  "name": "GestionHotel-Suite",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "authors": {
+    "name": "Pablo Otero Castro",
+    "email": "pablooterocastro15@gmail.com"
+  },
+  "repository": "https://github.com/cocot3ro/GestionHotel-Suite/GestionHotel-Suite",
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.5.3"
+  }
+}
