@@ -3,25 +3,37 @@
 # abort on errors
 set -e
 
+if [ ! -d node_modules ]; then
+	yarn install
+fi
+
 # build
 npm run build
 
 # navigate into the build output directory
 cd src/.vuepress
 
-mkdir -p docs
+if [ -d deploy ]; then
+	rm -rf docs
+fi
 
-cd docs
+mkdir -p deploy
+
+cd deploy
 
 git init -b main
 git remote add origin git@github.com:cocot3ro/GestionHotel-Suite.git
-git pull
+git pull origin main
 
-cp -r ../dist/* .
+mkdir -p docs
 
-git add docs
+cp -r ../dist/* docs
+
+git add .
 git commit -m 'deploy vue site'
 
 git push -u origin main
 
-cd -
+cd ..
+
+rm -rf deploy
