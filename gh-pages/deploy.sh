@@ -14,7 +14,7 @@ npm run build
 cd src/.vuepress
 
 if [ -d deploy ]; then
-	rm -rf docs
+	rm -rf deploy
 fi
 
 mkdir -p deploy
