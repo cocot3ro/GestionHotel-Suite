@@ -27,6 +27,8 @@ git pull origin main
 
 mkdir -p docs
 
+rm -rf docs/*
+
 cp -r ../dist/* docs
 
 git add .
