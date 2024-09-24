@@ -1,9 +1,6 @@
 [submodule "core"]
 	path = core
 	url = https://github.com/cocot3ro/GestionHotel-Core
-[submodule "client-desktop"]
-	path = client-desktop
-	url = https://github.com/cocot3ro/GestionHotel-ClientDesktop
-[submodule "client-mobile"]
-	path = client-mobile
-	url = https://github.com/cocot3ro/GestionHotel-ClientMobile
+[submodule "GestionHotel-ModuloAlmacen"]
+	path = GestionHotel-ModuloAlmacen
+	url = https://github.com/cocot3ro/GestionHotel-ModuloAlmacen
