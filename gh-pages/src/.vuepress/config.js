@@ -5,7 +5,7 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: 'Vuepress Docs Boilerplate',
+  title: 'GestionHotel Suite',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
@@ -28,37 +28,27 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
   themeConfig: {
-    repo: '',
+    search: false,
+    repo: 'https://github.com/cocot3ro/GestionHotel-Suite',
     editLinks: false,
     docsDir: '',
     editLinkText: '',
     lastUpdated: false,
     nav: [
       {
-        text: 'Guide',
-        link: '/guide/',
+        text: 'Core',
+        link: 'https://cocot3ro.github.io/GestionHotel-Core',
+        target: '_self',
+        rel: false
       },
       {
-        text: 'Config',
-        link: '/config/'
-      },
-      {
-        text: 'VuePress',
-        link: 'https://v1.vuepress.vuejs.org'
+        text: 'Módulo Almacen',
+        link: 'https://cocot3ro.github.io/GestionHotel-Core',
+        target: '_self',
+        rel: false
       }
     ],
-    sidebar: {
-      '/guide/': [
-        {
-          title: 'Guide',
-          collapsable: false,
-          children: [
-            '',
-            'using-vue',
-          ]
-        }
-      ],
-    }
+    sidebar: {}
   },
 
   /**
