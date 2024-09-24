@@ -10,6 +10,7 @@ fi
 
 echo $(pwd | rev | cut -d '/' -f 1 | rev)
 git checkout $1
+echo
 
 git restore --staged .
 
