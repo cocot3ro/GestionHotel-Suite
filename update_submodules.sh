@@ -8,6 +8,7 @@ if [ $# -lt 1 ]; then
 	exit 1
 fi
 
+echo $(pwd | rev | cut -d '/' -f 1 | rev)
 git checkout $1
 
 git restore --staged .
