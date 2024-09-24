@@ -1,5 +1,5 @@
-[submodule "core"]
-	path = core
+[submodule "GestionHotel-Core"]
+	path = GestionHotel-Core
 	url = https://github.com/cocot3ro/GestionHotel-Core
 [submodule "GestionHotel-ModuloAlmacen"]
 	path = GestionHotel-ModuloAlmacen
