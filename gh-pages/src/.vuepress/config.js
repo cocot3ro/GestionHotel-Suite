@@ -43,7 +43,7 @@ module.exports = {
       },
       {
         text: 'Módulo Almacen',
-        link: 'https://cocot3ro.github.io/GestionHotel-Core',
+        link: 'https://cocot3ro.github.io/GestionHotel-ModuloAlmacen',
         target: '_self',
         rel: false
       }
