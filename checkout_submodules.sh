@@ -3,24 +3,17 @@
 # abort on error
 set -e
 
-echo $(pwd | rev | cut -d '/' -f 1 | rev)
-git checkout main
-echo
-
-git restore --staged .
+if [ $# -lt 1 ]; then
+	echo "No branch specified"
+	exit 1
+fi
 
 submodules=$(cat .gitmodules | grep path | sed -e "s/.*= //g")
 
 for submodule in $submodules; do
 	echo "$submodule"
 	cd $submodule
-	git checkout main
+	git checkout $1
 	cd ..
-	git add $submodule
 	echo
 done
-
-git status
-
-git commit -m "update submodules"
-git push
