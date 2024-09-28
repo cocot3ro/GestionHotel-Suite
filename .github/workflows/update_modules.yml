@@ -14,6 +14,11 @@ jobs:
       with:
         submodules: recursive
 
+    - name: Set up Git
+      run: |
+        git config --local user.name "Github Action"
+        git config --local user.email "actions@github.com"
+
     - name: Update submodules
       run: |
         git submodule update --remote
