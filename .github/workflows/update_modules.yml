@@ -1,0 +1,22 @@
+name: Update submodules
+
+on:
+  repository_dispatch:
+    types: [update_submodule]
+
+jobs:
+  update-submodules:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout superrepository
+      uses: actions/checkout@v4
+      with:
+        submodules: recursive
+
+    - name: Update submodules
+      run: |
+        git submodule update --remote
+        git add .
+        git commit -m "Autoupdate submodule references"
+        git push
