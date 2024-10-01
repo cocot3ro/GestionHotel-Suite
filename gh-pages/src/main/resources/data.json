@@ -1,0 +1,83 @@
+{
+  "pages": {
+    "root": {
+      "path": "/",
+      "frontmatter": {
+        "home": true,
+        "heroText": "GestiónHotel Suite",
+        "tagline": "",
+        "features": [
+          {
+            "title": "Core",
+            "details": ""
+          },
+          {
+            "title": "Módulo Almacén",
+            "details": ""
+          }
+        ]
+      }
+    },
+    "core": {
+      "path": "/core/",
+      "repo": "GestionHotel-Core",
+      "frontmatter": {
+        "home": true,
+        "tagline": "vX.X.X",
+        "heroText": "Core",
+        "title": "Core",
+        "actions": [
+          {
+            "text": "Descarga la última versión",
+            "link": "https://download.com",
+            "type": "primary"
+          }
+        ]
+      }
+    },
+    "moduloAlmacenAndroid": {
+      "path": "/modulo-almacen/android/",
+      "repo": "GestionHotel-ModuloAlmacen-Android",
+      "frontmatter": {
+        "home": true,
+        "tagline": "vX.X.X",
+        "heroText": "Módulo Almacén",
+        "title": "Módulo Almacén",
+        "actions": [
+          {
+            "text": "Descarga la última versión",
+            "link": "https://download.com",
+            "type": "primary"
+          },
+          {
+            "text": "Versión Windows →",
+            "link": "/modulo-almacen/desktop",
+            "type": "secondary"
+          }
+        ]
+      }
+    },
+    "moduloAlmacenDesktop": {
+      "path": "/modulo-almacen/desktop/",
+      "repo": "GestionHotel-ModuloAlmacen-Desktop",
+      "frontmatter": {
+        "home": true,
+        "tagline": "vX.X.X",
+        "heroText": "Módulo Almacén",
+        "title": "Módulo Almacén",
+        "actions": [
+          {
+            "text": "Descarga la última versión",
+            "link": "https://download.com",
+            "type": "primary"
+          },
+          {
+            "text": "Versión Android →",
+            "link": "/modulo-almacen/android",
+            "type": "secondary"
+          }
+        ]
+      }
+    }
+  }
+}
