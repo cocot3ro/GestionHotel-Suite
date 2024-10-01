@@ -1,14 +1,18 @@
 package com.cocot3ro.tools
 
 import com.google.gson.Gson
+import com.google.gson.GsonBuilder
 import okhttp3.OkHttpClient
 import okhttp3.Request
+import java.io.File
 import java.nio.file.Files
 import java.nio.file.Path
 import kotlin.math.pow
 
 fun main() {
-    val gson = Gson()
+    val gson = GsonBuilder()
+        .setPrettyPrinting()
+        .create()
 
     val data = Site::class.java.getResource("/data.json")!!.readText()
 
@@ -32,9 +36,17 @@ fun main() {
     target.resolve("core").deleteRecursively()
     target.resolve("modulo-almacen").deleteRecursively()
     target.resolve("index.md").delete()
+    target.resolve("versions.json").delete()
 
     val generatedDocs = Path.of("src/main/resources/docs").toFile()
     generatedDocs.copyRecursively(Path.of("docs").toFile(), overwrite = true)
+
+    val versionsMap: Map<String, Version> = mapOf(
+        "core" to site.pages["core"]!!.version!!,
+        "modulo-almacen-android" to site.pages["moduloAlmacenAndroid"]!!.version!!,
+        "modulo-almacen-desktop" to site.pages["moduloAlmacenDesktop"]!!.version!!
+    )
+    File(target, "versions.json").bufferedWriter().use { it.write(gson.toJson(versionsMap)) }
 }
 
 fun generatePage(page: Page) {
@@ -55,6 +67,7 @@ fun generatePage(page: Page) {
 
             this.frontmatter.tagline = latestRelease.tagName
             this.frontmatter.actions!![0].link = latestRelease.assets[0].browserDownloadUrl
+            this.version = Version(latestRelease.tagName.substring(1), latestRelease.assets[0].browserDownloadUrl)
         }
         val releasesRequest = Request.Builder()
             .url("$apiBaseUrl/$repo/releases")

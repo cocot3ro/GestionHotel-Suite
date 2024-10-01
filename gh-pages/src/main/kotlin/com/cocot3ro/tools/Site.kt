@@ -7,5 +7,6 @@ data class Site(
 data class Page(
     var path: String,
     var repo: String,
-    var frontmatter: Frontmatter
+    var frontmatter: Frontmatter,
+    var version: Version? = null
 )

@@ -1,5 +1,5 @@
 node_modules
-docs/.vuepress/*
+docs
 !docs/.vuepress/config.js
 
 .gradle

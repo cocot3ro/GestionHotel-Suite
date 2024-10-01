@@ -10,19 +10,37 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout superrepository
-      uses: actions/checkout@v4
-      with:
-        submodules: recursive
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
 
-    - name: Set up Git
-      run: |
-        git config --local user.name "Github Action"
-        git config --local user.email "actions@github.com"
+      - name: Set up Git
+        run: |
+          git config --local user.name "Github Action"
+          git config --local user.email "actions@github.com"
 
-    - name: Update submodules
-      run: |
-        git submodule update --remote
-        git add .
-        git commit -m "Autoupdate submodule references"
-        git push
+      - name: Update submodules
+        run: |
+          git submodule update --remote
+          git add .
+          git commit -m "Autoupdate submodule references"
+          git push
+
+  deploy-pages:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      
+      - name: Set up Git
+        run: |
+          git config --local user.name "Github Action"
+          git config --local user.email "actions@github.com"
+
+      - name: Build & Deploy
+        run: |
+          ./deploy-gh-pages
