@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es-ES">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content="VuePress 2.0.0-rc.17" />
+    <style>
+      :root {
+        --vp-c-bg: #fff;
+      }
+
+      [data-theme='dark'] {
+        --vp-c-bg: #1b1b1f;
+      }
+
+      html,
+      body {
+        background-color: var(--vp-c-bg);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem('vuepress-color-scheme')
+      const systemDarkMode =
+        'matchMedia' in window
+          ? window.matchMedia('(prefers-color-scheme: dark)').matches
+          : false
+
+      if (userMode === 'light') {
+        document.documentElement.dataset.theme = 'light'
+      } else if (userMode === 'dark' || systemDarkMode) {
+        document.documentElement.dataset.theme = 'dark'
+      }
+    </script>
+    <title>GestiónHotel Suite</title><meta name="description" content="">
+    <link rel="preload" href="/GestionHotel-Suite/assets/style-CEwRFmTb.css" as="style"><link rel="stylesheet" href="/GestionHotel-Suite/assets/style-CEwRFmTb.css">
+    <link rel="modulepreload" href="/GestionHotel-Suite/assets/app-Do3Zf6Bo.js"><link rel="modulepreload" href="/GestionHotel-Suite/assets/404.html-DCZTxzOt.js">
+    <link rel="prefetch" href="/GestionHotel-Suite/assets/index.html-Ba-DlELX.js" as="script"><link rel="prefetch" href="/GestionHotel-Suite/assets/index.html-DOdMNc80.js" as="script"><link rel="prefetch" href="/GestionHotel-Suite/assets/index.html-5YQWmDEm.js" as="script"><link rel="prefetch" href="/GestionHotel-Suite/assets/index.html-CBxUbJ7f.js" as="script"><link rel="prefetch" href="/GestionHotel-Suite/assets/setupDevtools-7MC2TMWH-CM4OAm13.js" as="script">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="vp-theme-container" vp-container data-v-0eb05c11><main class="page" data-v-0eb05c11><div class="theme-default-content" vp-content data-v-0eb05c11><h1 data-v-0eb05c11>404</h1><blockquote data-v-0eb05c11>Looks like we&#39;ve got some broken links.</blockquote><a class="route-link" href="/GestionHotel-Suite/" data-v-0eb05c11>Take me home</a></div></main></div><!--[--><!----><!--]--><!--]--></div>
+    <script type="module" src="/GestionHotel-Suite/assets/app-Do3Zf6Bo.js" defer></script>
+  </body>
+</html>
