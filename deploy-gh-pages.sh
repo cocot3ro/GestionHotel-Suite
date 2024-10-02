@@ -17,5 +17,5 @@ cd docs/.vuepress/dist
 git init
 git add .
 git commit -m "deploy"
-git remote add origin git@github.com:cocot3ro/GestionHotel-suite.git
+git remote add origin git@github.com:cocot3ro/GestionHotel-Suite.git
 git push -u origin gh-pages
